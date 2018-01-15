@@ -10,12 +10,10 @@ interface MermaidState {
 }
 
 class Mermaid extends React.Component<MermaidProps, MermaidState>{
+  public static defaultProps: MermaidProps = {name: 'mermaid'};
+
   constructor (props) {
-    let newProps = {
-      ...props,
-      name: props.name || 'mermaid',
-    };
-    super(newProps);
+    super(props);
     this.state = {diagram: 'Loading diagram...'};
   }
 

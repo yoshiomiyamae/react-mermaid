@@ -3,8 +3,7 @@ const React = require("react");
 const mermaid_1 = require("mermaid");
 class Mermaid extends React.Component {
     constructor(props) {
-        let newProps = Object.assign({}, props, { name: props.name || 'mermaid' });
-        super(newProps);
+        super(props);
         this.state = { diagram: 'Loading diagram...' };
     }
     componentDidMount() {
@@ -15,5 +14,6 @@ class Mermaid extends React.Component {
         return (React.createElement("div", { className: "mermaid", dangerouslySetInnerHTML: { __html: this.state.diagram } }));
     }
 }
+Mermaid.defaultProps = { name: 'mermaid' };
 exports.default = Mermaid;
 //# sourceMappingURL=react-mermaid.js.map
