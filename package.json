@@ -16,7 +16,8 @@
     "url": "https://github.com/jasonbellamy/react-mermaid/issues"
   },
   "license": "MIT",
-  "main": "dist/react-mermaid",
+  "main": "src/react-mermaid",
+  "typings": "src/react-mermaid.tsx",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -28,12 +29,11 @@
     "postpublish": "git push && git push --tag"
   },
   "dependencies": {
-    "mermaid": "^0.5.1"
+    "mermaid": "^0.5.1",
+    "react": "^16.2.0"
   },
   "devDependencies": {
-    "babel": "^5.8.9",
-    "core-js": "^0.9.6",
-    "react": "^0.13.3"
+    "@types/react": "^16.0.34"
   },
   "keywords": [
     "react",
