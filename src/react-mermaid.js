@@ -3,8 +3,8 @@ const React = require("react");
 const mermaid_1 = require("mermaid");
 class Mermaid extends React.Component {
     constructor(props) {
-        props.name = props.name || 'mermaid';
-        super(props);
+        let newProps = Object.assign({}, props, { name: props.name || 'mermaid' });
+        super(newProps);
         this.state = { diagram: 'Loading diagram...' };
     }
     componentDidMount() {
